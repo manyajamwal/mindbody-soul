@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Therapist Online</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+  <link rel="stylesheet" href="therapydoc.css">
+</head>
+<body>
+
+  <h1>Help us match you to the right therapist.</h1>
+
+  <div class="therapist-container">
+  <div class="therapist">
+    <img src="imgs\doc1.jpg" alt="Therapist 1">
+    <div class="details">
+      <h2>Dr. John Doe</h2>
+      <p> Dr. Doe specializes in helping patients dealing with depression. With years of experience in cognitive behavioral therapy, he offers personalized treatment plans to address each patient's unique needs.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+
+  <div class="therapist">
+    <img src="imgs\doc2.jpg" alt="Therapist 2">
+    <div class="details">
+      <h2>Dr. Jane Smith</h2>
+      <p> Dr. Smith is dedicated to assisting individuals struggling with anxiety disorders. She employs a combination of mindfulness techniques and exposure therapy to empower her patients to overcome their fears and regain control of their lives.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+
+  <!-- Repeat the above div for each additional therapist -->
+  
+  <div class="therapist">
+    <img src="imgs\doc3.jpg"" alt="Therapist 3">
+    <div class="details">
+      <h2>Dr. Michael Brown</h2>
+      <p>Dr. Brown is an expert in treating post-traumatic stress disorder (PTSD). He utilizes evidence-based therapies such as Eye Movement Desensitization and Reprocessing (EMDR) to help patients process traumatic experiences and move towards healing.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs\doc4.jpg"" alt="Therapist 4">
+    <div class="details">
+      <h2>Dr. Sarah Johnson</h2>
+      <p> Dr. Johnson specializes in obsessive-compulsive disorder (OCD) treatment. Through a compassionate and holistic approach, she helps patients understand their compulsions and develop strategies to manage and reduce their symptoms effectively.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs\doc5.jpg"" alt="Therapist 5">
+    <div class="details">
+      <h2>Dr. Emily Lee</h2>
+      <p>Dr. Lee focuses on assisting individuals with bipolar disorder. She provides comprehensive psychoeducation and medication management to stabilize mood swings and enhance overall well-being.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs/doc6.jpg" alt="Therapist 6">
+    <div class="details">
+      <h2>Dr. David Clark</h2>
+      <p>Dr. Clark specializes in helping individuals overcome substance abuse issues. With a blend of motivational interviewing and relapse prevention techniques, he supports patients on their journey towards sobriety and long-term recovery.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs/doc7.jpg" alt="Therapist 7">
+    <div class="details">
+      <h2>Dr. Anna Martinez</h2>
+      <p>Dr. Martinez is passionate about aiding individuals with eating disorders. She employs a multidisciplinary approach, including nutritional counseling and cognitive-behavioral therapy, to help patients develop a healthy relationship with food and their bodies.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs/doc8.jpg" alt="Therapist 8">
+    <div class="details">
+      <h2>Dr. Robert White</h2>
+      <p>Dr. White specializes in anger management therapy. Through anger awareness exercises and cognitive restructuring, he assists patients in understanding and managing their anger in constructive ways, leading to improved relationships and emotional well-being.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs/doc9.jpg" alt="Therapist 9">
+    <div class="details">
+      <h2>Dr. Samantha Green</h2>
+      <p> Dr. Green focuses on boosting self-esteem and self-confidence in her patients. Using techniques such as positive affirmations and self-care practices, she helps individuals cultivate a more positive self-image and outlook on life.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  
+  <div class="therapist">
+    <img src="imgs/doc10.jpg" alt="Therapist 10">
+    <div class="details">
+      <h2>Dr. Daniel Wilson</h2>
+      <p> Dr. Wilson specializes in providing grief counseling to individuals coping with loss. He offers a safe space for patients to express their emotions and guides them through the grieving process with empathy and support.</p>
+      <button onclick="bookAppointment()">Book an Appointment</button>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const therapistsContainer = document.querySelector('.therapists-container');
+      const therapists = Array.from(therapistsContainer.children);
+
+      // Shuffle the therapists array
+      shuffleArray(therapists);
+
+      // Append shuffled therapists back to the container
+      therapists.forEach(therapist => {
+        therapistsContainer.appendChild(therapist);
+      });
+    });
+
+    // Function to shuffle array
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+</script>
+</body>
+</html>

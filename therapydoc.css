@@ -1,0 +1,42 @@
+/* styles.css */
+body {
+    font-family: 'Poppins';
+    background-color: #B5C0D0;
+}
+
+h1 {
+    text-align: center;
+    margin:40px 0px;
+    color:#0e2a48;
+}
+
+.therapist {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px; /* Optional: Set a maximum width for the .therapist div */
+}
+
+.therapist img {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+button {
+    background-color: #0e2a48;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #1f5c9d;
+}
